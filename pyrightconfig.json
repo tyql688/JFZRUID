@@ -1,0 +1,8 @@
+{
+  "typeCheckingMode": "basic",
+  "pythonVersion": "3.11",
+  "include": ["JFZRUID"],
+  "extraPaths": ["../../.."],
+  "venvPath": "../../..",
+  "venv": ".venv"
+}

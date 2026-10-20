@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #493728; background: #e3dade; font-family: "MiSans"; }
+    .banner { height: 180px; position: relative; overflow: hidden; border-radius: 1px; background: #101f3f; }
+    .banner-art { position: absolute; top: 0; left: 0; width: 1382px; height: 180px; max-width: none; }
+    .logo { position: absolute; right: 36px; top: 28px; width: 166px; height: 77px; }
+    .banner-label { position: absolute; right: 36px; bottom: 26px; color: #f6e7b5; font-size: 18px; letter-spacing: 4px; }
+    .sheet { padding: 34px 40px 26px; border-top: 4px solid #b39655; }
+    .heading { padding-bottom: 26px; border-bottom: 1px solid #c3ae83; }
+    .eyebrow { color: #967638; font-size: 16px; letter-spacing: 3px; margin-bottom: 10px; }
+    h1 { color: #4b2c13; font-size: 34px; line-height: 1.45; font-weight: 700; margin: 0 0 14px; }
+    .meta { color: #897765; font-size: 18px; }
+    .news-row { padding: 25px 0 22px; border-bottom: 1px solid #cdbfae; }
+    .row-meta { display: flex; align-items: center; justify-content: space-between; color: #8a7762; font-size: 17px; }
+    .id { color: #77501d; background: #d5c6ad; padding: 4px 12px; border-radius: 4px; font-weight: 600; }
+    .row-title { color: #49311b; font-size: 26px; font-weight: 600; line-height: 1.5; margin: 12px 0; }
+    .command { color: #937438; font-size: 18px; }
+    .article { padding-top: 18px; font-size: 24px; line-height: 1.85; overflow-wrap: anywhere; }
+    .article p { margin: 0 0 17px; }
+    .article strong, .article b { color: #6e441c; font-weight: 700; }
+    .article img { display: block; width: 100%; height: auto; margin: 18px 0; }
+    .article h1, .article h2, .article h3 { color: #6e441c; font-size: 28px; margin: 20px 0 12px; }
+    .article ul, .article ol { padding-left: 32px; }
+    .md-table { display: flex; flex-direction: column; margin: 16px 0; border: 1px solid #bca77f; font-size: 19px; }
+    .md-table-row { display: flex; width: 100%; }
+    .md-table-cell { flex: 1; padding: 10px; border: 1px solid #cdbfae; }
+    .footer { padding-top: 26px; color: #8a7762; font-size: 17px; line-height: 1.6; }
+    .brand { padding-top: 12px; font-size: 13px; letter-spacing: 2px; color: #a5947b; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img class="banner-art" src="{{ banner }}">
+    <img class="logo" src="{{ logo }}">
+    <div class="banner-label">KRITIKA / NEWS</div>
+  </div>
+  <div class="sheet">
+    <div class="heading">
+      <div class="eyebrow">疾风之刃 · 新闻资讯</div>
+      <h1>{{ title }}</h1>
+      <div class="meta">{{ meta }}</div>
+    </div>
+    {{ content | safe }}
+    <div class="footer">{{ footer }}</div>
+    <div class="brand">JFZRUID · GSCORE</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "公告查询": {
+    "desc": "官网公告",
+    "data": [
+      {
+        "name": "公告列表",
+        "desc": "查看最新 5 条公告及官网 ID",
+        "eg": "公告列表",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": false
+      },
+      {
+        "name": "最新公告",
+        "desc": "查看最新公告详情",
+        "eg": "公告",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": false
+      },
+      {
+        "name": "指定公告",
+        "desc": "按官网 ID 查询公告详情",
+        "eg": "公告1020",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": false
+      }
+    ]
+  },
+  "订阅推送": {
+    "desc": "群管理员 · 每 10 分钟检查",
+    "data": [
+      {
+        "name": "订阅推送",
+        "desc": "开启本群新公告推送",
+        "eg": "订阅公告",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": true
+      },
+      {
+        "name": "关闭推送",
+        "desc": "关闭本群公告推送",
+        "eg": "取消订阅公告",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": true
+      }
+    ]
+  },
+  "缓存管理": {
+    "desc": "群管理员 · 查询缓存 1 小时",
+    "data": [
+      {
+        "name": "刷新缓存",
+        "desc": "清理公告查询和图片缓存",
+        "eg": "清理公告缓存",
+        "highlight": 6,
+        "need_ck": false,
+        "need_sk": false,
+        "need_admin": true
+      }
+    ]
+  }
+}
