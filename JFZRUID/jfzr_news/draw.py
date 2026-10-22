@@ -76,7 +76,11 @@ async def _article_html(content: str) -> str:
                 src = attrs["src"] if "src" in attrs else ""
                 url = urljoin(NEWS_URL, src) if isinstance(src, str) else ""
                 parsed = urlsplit(url)
-                if parsed.scheme != "https" or parsed.hostname not in {"img.youxi290.com", "www.kritika.hk"}:
+                if parsed.scheme != "https" or parsed.hostname not in {
+                    "img.youxi290.com",
+                    "img.fxegames.com",
+                    "www.kritika.hk",
+                }:
                     tag.replace_with(soup.new_string("【配图请查看原文】"))
                     continue
                 response = await client.get(url)
@@ -124,6 +128,9 @@ async def _article_html(content: str) -> str:
                 text.extract()
             else:
                 text.replace_with(_simplify(str(text)))
+    for paragraph in soup.find_all("p"):
+        if not paragraph.get_text(strip=True) and paragraph.find(["img", "hr"]) is None:
+            paragraph.decompose()
     return rewrite_tables_for_takumi(str(soup))
 
 
